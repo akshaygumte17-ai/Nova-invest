@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Invest —  Investment Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home"><span class="logo">N</span> Nova Invest</a>
+    <nav class="topnav">
+      <a href="#" data-page="home">Home</a><a href="#" data-page="plans">Products</a>
+      <a href="#" data-page="about">About</a><a href="#" data-page="contact">Contact</a>
+    </nav>
+    <div class="top-actions"><button class="btn btn-outline" data-page="login">Login</button><button class="btn btn-green" data-page="register">Register</button></div>
+    <button class="hamburger" id="menuToggle">☰</button>
+  </header>
+
+  <main id="app">
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> YOUR FINANCIAL JOURNEY STARTS HERE</div>
+          <h1>Invest Today.<br>Build a Better<br><span>Tomorrow.</span></h1>
+          <p>Explore sample investment plans, track your activity, and learn how a financial dashboard works.</p>
+          <div class="hero-actions"><button class="btn btn-green btn-large" data-page="register">Get Started <span>→</span></button><button class="btn btn-outline btn-large" data-page="plans">View Plans</button></div>
+          <div class="hero-note"><span>✓</span>Invest Your Savings</div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="phone"><div class="phone-notch"></div><div class="phone-brand"><span class="logo">N</span> NOVA</div><div class="phone-label">PORTFOLIO</div><div class="phone-value">₹ 10,000</div><div class="phone-change">↗ +  growth</div><div class="mini-chart"><svg viewBox="0 0 300 100" preserveAspectRatio="none"><path d="M0 80 C25 75 25 45 55 60 S90 80 120 42 S165 70 195 35 S240 55 300 8" fill="none" stroke="#3ce5a0" stroke-width="4"/><path d="M0 80 C25 75 25 45 55 60 S90 80 120 42 S165 70 195 35 S240 55 300 8 L300 100 L0 100Z" fill="url(#g)" opacity=".22"/><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#3ce5a0"/><stop offset="1" stop-color="#3ce5a0" stop-opacity="0"/></linearGradient></defs></svg></div><div class="phone-bottom"><span>Portfolio overview</span><b>Real account</b></div></div>
+          <div class="coin coin-a">₹</div><div class="coin coin-b">₹</div><div class="coin coin-c">₹</div>
+          <div class="growth growth-a"></div><div class="growth growth-b"></div><div class="growth growth-c"></div>
+          <div class="float-card"><span class="float-icon">↗</span><div><small>Portfolio activity</small><b>Updated locally</b></div></div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature"><span class="feature-icon">⌑</span><div><b> Dashboard</b><small>View your  account</small></div></div>
+        <div class="feature"><span class="feature-icon">↗</span><div><b>Plan Comparison</b><small>Compare sample plans</small></div></div>
+        <div class="feature"><span class="feature-icon">▣</span><div><b>Activity History</b><small>Track your transactions</small></div></div>
+        <div class="feature"><span class="feature-icon">◷</span><div><b>Admin Review Flow</b><small>Test request approvals</small></div></div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">EXPLORE NOVA</span><h2>Choose a Better plan</h2></div><button class="text-link" data-page="plans">View all plans →</button></div>
+      <div class="plan-grid" id="homePlans"></div>
+      <div class="notice wide-notice"><b>Invest in right way</div>
+    </section>
+
+    <section class="page auth-page" id="page-login">
+      <div class="auth-card"><div class="auth-logo"><span class="logo">N</span><b>Nova Invest</b></div><h2>Welcome Back</h2><p class="muted">Login to your account</p>
+        <form id="loginForm"><label>Email or mobile number</label><input id="loginIdentity" required placeholder="Enter email or mobile number"><label>Password</label><div class="password-wrap"><input id="loginPassword" type="password" required placeholder="Enter password"><button type="button" class="eye" data-toggle="loginPassword">◉</button></div><div class="form-row between"><label class="check-label"><input type="checkbox" checked> Remember me</label><a href="#" id="forgotLink">Forgot password?</a></div><button class="btn btn-green full" type="submit">Login</button></form>
+        <p class="auth-foot">Don't have an account? <a href="#" data-page="register">Register Now</a></p>
+        <div class="demo-hint">Demo tip: register a test account, or use <b>demo@novainvest.test</b> / <b>demo123</b>.</div>
+      </div>
+    </section>
+
+    <section class="page auth-page" id="page-register">
+      <div class="auth-card"><div class="auth-logo"><span class="logo">N</span><b>Nova Invest</b></div><h2>Create Account</h2><p class="muted">Join the Nova Invest Community</p>
+        <form id="registerForm"><label>Full name</label><input id="regName" required placeholder="Enter your full name"><label>Mobile number</label><input id="regMobile" required inputmode="tel" placeholder="Enter mobile number"><label>Email address</label><input id="regEmail" type="email" required placeholder="Enter email address"><label>Password</label><div class="password-wrap"><input id="regPassword" type="password" required minlength="6" placeholder="Create password"><button type="button" class="eye" data-toggle="regPassword">◉</button></div><button class="btn btn-green full" type="submit">Register</button></form>
+        <p class="auth-foot">Already have an account? <a href="#" data-page="login">Login</a></p><div class="demo-hint"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-plans">
+      <div class="page-title"><div><span class="eyebrow">BEST PRODUCTS</span><h1>Investment Plans</h1><p class="muted"</p></div><div class="pill"></div></div>
+      <div class="plan-grid full-plans" id="allPlans"></div>
+    </section>
+
+    <section class="page" id="page-dashboard">
+      <div class="dashboard-layout"><aside class="sidebar"><a class="brand side-brand" href="#" data-page="dashboard"><span class="logo">N</span> Nova Invest</a><div class="side-links">
+        <a class="side-link selected" href="#" data-page="dashboard">▦ <span>Dashboard</span></a><a class="side-link" href="#" data-page="plans">♧ <span>Invest Plans</span></a><a class="side-link" href="#" data-page="deposit">＋ <span>Deposit</span></a><a class="side-link" href="#" data-page="withdraw">↗ <span>Withdraw</span></a><a class="side-link" href="#" data-page="transactions">▤ <span>Transactions</span></a><a class="side-link" href="#" data-page="investments">◈ <span>My Investments</span></a><a class="side-link" href="#" data-page="profile">♙ <span>Profile</span></a><a class="side-link logout" href="#" id="logoutLink">⇥ <span>Logout</span></a>
+      </div></aside><div class="dash-content"><div class="dash-heading"><div><h1>Dashboard</h1><p class="muted">Welcome back, <span id="dashName">User</span>!</p></div><div class="user-chip"><div class="avatar" id="avatar">U</div><div><b id="userDisplay">Demo User</b><small id="userEmail">user@novainvest.test</small></div></div></div>
+        <div class="stat-grid"><div class="stat-card"><span class="stat-icon green">₹</span><div><small>Total Balance</small><b id="balanceStat">₹ 0</b><em>Demo balance</em></div></div><div class="stat-card"><span class="stat-icon gold">▤</span><div><small>Invested Amount</small><b id="investedStat">₹ 0</b><em>Active  plans</em></div></div><div class="stat-card"><span class="stat-icon blue">↗</span><div><small>Total Rewards</small><b id="rewardsStat">₹ 0</b><em>Real Invest</em></div></div><div class="stat-card"><span class="stat-icon orange">◷</span><div><small>Pending Requests</small><b id="pendingStat">0</b><em>Awaiting review</em></div></div></div>
+        <div class="content-card"><div class="card-heading"><h3>Recent Activity</h3><a href="#" data-page="transactions">View All →</a></div><div id="recentActivity"></div></div>
+        <div class="content-card"><div class="card-heading"><h3>Quick Actions</h3></div><div class="quick-actions"><button data-page="plans">＋ Browse plans</button><button data-page="deposit">⇧ Submit deposit request</button><button data-page="withdraw">⇩ Request withdrawal</button></div></div>
+        <div class="notice">  Requests are stored locally and are connected to any bank or payment provider.</div>
+      </div></div>
+    </section>
+
+    <section class="page" id="page-deposit"><div class="dashboard-layout"><aside class="sidebar" data-sidebar></aside><div class="dash-content narrow-content"><div class="page-title"><div><span class="eyebrow">ADD FUNDS</span><h1>Deposit Request</h1><p class="muted">Minimum  request amount: ₹500</p></div></div><div class="form-card"><form id="depositForm"><label>Enter deposit amount (₹)</label><input id="depositAmount" type="number" min="500" step="1" required placeholder="Enter amount (minimum ₹500)"><label>Payment method </label><div class="radio-row"><label><input type="radio" name="payment" value="UPI" checked> UPI</label><label><input type="radio" name="payment" value="Bank transfer"> Bank transfer</label><label><input type="radio" name="payment" value="Other"> Other</label></div><label>Reference note (optional)</label><input id="depositRef" placeholder="Demo reference — do not enter sensitive details"><button class="btn btn-green full" type="submit">Submit Deposit Request</button></form><div class="notice"><b>Note</b><ul><li>Minimum  request is ₹500.</li><li> payment is processed by this site.</li><li>Requests appear as pending until approved in the demo admin panel.</li></ul></div></div></div></div></section>
+
+    <section class="page" id="page-withdraw"><div class="dashboard-layout"><aside class="sidebar" data-sidebar></aside><div class="dash-content narrow-content"><div class="page-title"><div><span class="eyebrow">PAYOUT /span><h1>Withdraw Request</h1><p class="muted">Minimum  withdrawal request: ₹1,000</p></div></div><div class="notice warning"><b> restriction:</b>  real money can be withdrawn. Always enter bank account or UPI details here.</div><div class="form-card"><form id="withdrawForm"><label>Enter withdrawal amount (₹)</label><input id="withdrawAmount" type="number" min="1000" step="1" required placeholder="Minimum ₹1,000"><div class="amount-presets"><button type="button" data-amount="1000">₹1,000</button><button type="button" data-amount="5000">₹5,000</button><button type="button" data-amount="10000">₹10,000</button><button type="button" data-amount="15000">₹15,000</button></div><label>Payment detail placeholder</label><input id="withdrawRef" placeholder="Use a fake placeholder only"><button class="btn btn-green full" type="submit">Submit Withdrawal Request</button></form></div></div></div></section>
+
+    <section class="page" id="page-transactions"><div class="dashboard-layout"><aside class="sidebar" data-sidebar></aside><div class="dash-content"><div class="page-title"><div><span class="eyebrow">ACCOUNT ACTIVITY</span><h1>Transaction History</h1><p class="muted"> requests and activity from this browser.</p></div></div><div class="content-card"><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Deposit">Deposits</button><button class="filter" data-filter="Withdrawal">Withdrawals</button><button class="filter" data-filter="Investment">Investments</button><button class="filter" data-filter="Reward">Rewards</button></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Type</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody id="transactionRows"></tbody></table></div></div></div></div></section>
+
+    <section class="page" id="page-investments"><div class="dashboard-layout"><aside class="sidebar" data-sidebar></aside><div class="dash-content"><div class="page-title"><div><span class="eyebrow">YOUR PORTFOLIO</span><h1>My Investments</h1><p class="muted">Sample plan selections are recorded locally.</p></div></div><div class="content-card"><div class="table-wrap"><table><thead><tr><th>Plan</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody id="investmentRows"></tbody></table></div></div><div class="notice">No real investment or return is created by selecting a demo plan.</div></div></div></section>
+
+    <section class="page" id="page-profile"><div class="dashboard-layout"><aside class="sidebar" data-sidebar></aside><div class="dash-content narrow-content"><div class="page-title"><div><span class="eyebrow">ACCOUNT SETTINGS</span><h1>Profile</h1></div></div><div class="form-card"><div class="profile-big"><div class="avatar large" id="profileAvatar">U</div><div><h2 id="profileName">Demo User</h2><p class="muted" id="profileEmail">demo@novainvest.test</p></div></div><label>Full name</label><input id="profileNameInput"><label>Email</label><input id="profileEmailInput" type="email"><label>Mobile</label><input id="profileMobileInput"><button class="btn btn-green full" id="saveProfile">Save Profile</button></div></div></div></section>
+
+    <section class="page auth-page" id="page-admin-login"><div class="auth-card"><div class="auth-logo"><span class="logo">N</span><b>Nova Invest Admin</b></div><h2>Admin Login</h2><p class="muted"> request review panel</p><form id="adminLoginForm"><label>Username</label><input id="adminUsername" value="admin" required><label>Password</label><input id="adminPassword" type="password" value="admin123" required><button class="btn btn-green full" type="submit">Login to Admin Demo</button></form><div class="demo-hint">Demo credentials: <b>admin</b> / <b>admin123</b>. This is not secure production authentication.</div></div></section>
+
+    <section class="page" id="page-admin"><div class="dashboard-layout"><aside class="sidebar admin-sidebar"><a class="brand side-brand" href="#" data-page="admin"><span class="logo">N</span> Nova Admin</a><div class="side-links"><a class="side-link selected" href="#" data-page="admin">▦ <span>Dashboard</span></a><a class="side-link" href="#adminRequests" data-admin-tab="deposits">♧ <span>Deposit Requests</span></a><a class="side-link" href="#adminRequests" data-admin-tab="withdrawals">↗ <span>Withdrawal Requests</span></a><a class="side-link" href="#adminUsers" data-admin-tab="users">♙ <span>Users</span></a><a class="side-link" href="#" id="adminLogout">⇥ <span>Logout</span></a></div></aside><div class="dash-content"><div class="dash-heading"><div><span class="eyebrow">ADMIN CONTROL CENTER</span><h1>Admin Dashboard</h1><p class="muted">Review  requests. Real payments are processed.</p></div><span class="pill">Demo mode</span></div><div class="stat-grid"><div class="stat-card"><span class="stat-icon blue">♙</span><div><small>Total Users</small><b id="adminUsersStat">0</b></div></div><div class="stat-card"><span class="stat-icon orange">◷</span><div><small>Pending Deposits</small><b id="adminDepositStat">0</b></div></div><div class="stat-card"><span class="stat-icon gold">⇩</span><div><small>Pending Withdrawals</small><b id="adminWithdrawStat">0</b></div></div><div class="stat-card"><span class="stat-icon green">₹</span><div><small> Requests</small><b id="adminTotalStat">₹0</b></div></div></div><div class="content-card" id="adminRequests"><div class="card-heading"><h3>Deposit Requests</h3><div class="tabs"><button class="filter active" data-admin-tab="deposits">Deposits</button><button class="filter" data-admin-tab="withdrawals">Withdrawals</button></div></div><div class="table-wrap"><table><thead><tr><th>User</th><th>Amount</th><th>Method / Note</th><th>Status</th><th>Action</th></tr></thead><tbody id="adminRequestRows"></tbody></table></div></div><div class="content-card" id="adminUsers"><div class="card-heading"><h3>Registered  Users</h3></div><div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Mobile</th><th>Joined</th></tr></thead><tbody id="adminUserRows"></tbody></table></div></div></div></div></section>
+
+    <section class="page simple-page" id="page-about"><span class="eyebrow">ABOUT NOVA</span><h1>Learn with  portfolio</h1><p>This  website demonstrates a possible investment dashboard interface. It is not a financial institution, broker, bank, or payment service.</p><div class="notice warning">A promised 2% daily return is exceptionally high and is  a safe or realistic and not guaranteed investment claim. This  does  calculate or promise daily returns.</div></section>
+    <section class="page simple-page" id="page-contact"><span class="eyebrow">CONTACT</span><h1>Contact</h1><p></p><div class="form-card"><label>Your name</label><input placeholder="Name"><label>Message</label><textarea placeholder="Write a demo message"></textarea><button class="btn btn-green" id="contactSubmit">Send  message</button></div></section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <footer><span class="brand"><span class="logo">N</span> Nova Invest</span><span>Invest in yourself · real financial services</span><button class="admin-link" data-page="admin-login">Admin</button></footer>
+  <script src="app.js"></script>
+</body>
+</html>
